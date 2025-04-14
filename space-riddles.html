@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Space Riddle Generator</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+      color: #ffffff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    #riddle-box {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid #aaa;
+      border-radius: 12px;
+      padding: 30px;
+      width: 60%;
+      margin: 0 auto 30px;
+      font-size: 1.2em;
+    }
+
+    button {
+      background-color: #ffcc00;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1em;
+      color: #000;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ffc107;
+    }
+
+    a {
+      color: #ffcc00;
+      display: block;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🚀 Space Riddle Generator</h1>
+
+  <div id="riddle-box">Click the button to reveal a cosmic riddle!</div>
+  <button onclick="showRiddle()">Give me a riddle</button>
+
+  <a href="scratch.html">← Back to Scratch Page</a>
+
+  <script>
+    const riddles = [
+      "I’m full of holes but I’m not a sponge. I light up the night, yet I'm not the sun. What am I? <br><br><strong>Answer:</strong> The Moon",
+      "The more I shrink, the brighter I shine. I’m full of gas but I’m not a balloon. What am I? <br><br><strong>Answer:</strong> A star",
+      "I orbit a star but I’m not a comet. I might have moons but I’m not the sun. What am I? <br><br><strong>Answer:</strong> A planet",
+      "I’m invisible, but I pull with all my might. Not even light can escape my sight. What am I? <br><br><strong>Answer:</strong> A black hole",
+      "I'm red but not hot, a mystery to solve. I may have life, but it’s not yet involved. What am I? <br><br><strong>Answer:</strong> Mars"
+    ];
+
+    function showRiddle() {
+      const randomIndex = Math.floor(Math.random() * riddles.length);
+      document.getElementById("riddle-box").innerHTML = riddles[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
